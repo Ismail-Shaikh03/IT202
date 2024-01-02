@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>House of Health</title>
+  <link href="PortalStyle.css" rel="stylesheet">
+</head>
+<body>
+<h1>House of Health</h1>
+<p>
+  <label for="first_name">Receptionist's First Name:</label>
+  <input type="text" name="first_name" id="first_name" placeholder="Ex:John" title="Enter First Name" required><strong class="required">Required</strong>
+</p>
+<p>
+  <label for="last_name">Receptionist's Last Name:</label>
+  <input type="text" name="last_name" id="last_name" placeholder="Ex:Smith" title="Enter Last Name" required><strong class="required">Required</strong>
+</p>
+<p>
+  <label for="phone_number">Receptionist's Phone Number:</label>
+  <input  type="text" name="phone_number" id="phone_number" placeholder="Ex:XXX-XXX-XXXX" title="Enter Phone Number" required><strong class="required">Required</strong>
+</p>
+<p>
+  <label for="email_address">Receptionist's Email Address:</label>
+  <input type="text" name=email_address" id="email_address" placeholder="Ex:Ex@gmail.com" title="Enter Email Address" required><strong class="required">Required</strong>
+</p>
+<p>
+  <label for="password">Receptionist's Password:</label>
+  <input type="password" name="password" id="password" placeholder="Ex:z76!k90" title="Enter Password" required><strong class="required">Required</strong>
+</p>
+<p>
+  <label for="id_number">Receptionist's ID Number:</label>
+  <input type="number" name="id_number" id="id_number" placeholder="Ex:9758312" title="Enter ID Number" required><strong class="required">Required</strong>
+</p>
+<p>
+  <label for="check_box">Check the box to request an email confirmation</label>
+  <input type="checkbox" name="check_box" id="check_box">
+</p>
+<p>
+  Select a Transaction:<br>
+  <label for="search_account">Search Account:</label>
+  <input type="radio" name="transactions" id="search_account" value="Search Account"><br>
+  <label for="book_appointment">Book Appointment:</label>
+  <input type="radio" name="transactions" id="book_appointment" value="Book Appointment"><br>
+  <label for="cancel_appointment">Cancel Appointment:</label>
+  <input type="radio" name="transactions" id="cancel_appointment" value="Cancel Appointment"><br>
+  <label for="request_procedures">Request Procedures:</label>
+  <input type="radio" name="transactions" id="request_procedures" value="Request Procedures"><br>
+  <label for="cancel_procedures">Cancel Procedures:</label>
+  <input type="radio" name="transactions" id="cancel_procedures" value="Cancel Procedures"><br>
+  <label for="update_info">Update Patient Information:</label>
+  <input type="radio" name="transactions" id="update_info" value="Update Information"><br>
+  <label for="create_patient">Create New Patient Account:</label>
+  <input type="radio" name="transactions" id="create_patient" value="Create Patient">
+</p>
+<p id="buttons">
+  <input type="submit" value="Submit">
+  <input type="button" value="Reset">
+</p>
+</body>
+</html>

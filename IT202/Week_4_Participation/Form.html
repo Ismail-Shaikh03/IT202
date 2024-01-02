@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+<form id="formID">
+    <p>
+    <label for="UCID">UCID:</label>
+    <input type="text" name="UCID" id="UCID" placeholder="Enter UCID" title="A UCID is a sequence of letters followed by numbers.">
+    </p>
+    <input type="submit" id="submit">
+</form>
+<script>
+    let testValues=["is385","Ros78","pq98","yu987","LD98"];
+    let re= /^[A-Za-z]+[0-9]{0,3}$/;
+    let subButton=document.getElementById("submit");
+    subButton.addEventListener("click",check);
+    function check(){
+        let user_ucid=document.getElementById("UCID").value;
+        if(re.test(user_ucid)){
+            if(testValues.indexOf(user_ucid)===-1){
+                window.alert("VALID UCID FORMAT BUT INVALID UCID.")
+            }
+            else{
+                window.alert("VALID UCID FORMAT AND UCID FOUND")
+            }
+        }
+        else{
+            window.alert("UCID DOES NOT CONFORM TO VALID FORMAT")
+        }
+}
+</script>
+</body>
+</html>

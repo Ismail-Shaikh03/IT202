@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Message</title>
+    <link href="WelcomeStyle.css" rel="stylesheet">
+</head>
+<body>
+<h1 id="header">Welcome to IT202</h1>
+<p id="instruction"><b>Put Mouse over the text Show Welcome to display. Mouse out to not display text.</b></p>
+<p id="message">Show Welcome</p>
+<script>
+    let msg=document.getElementById("message");
+    let heading=document.getElementById("header");
+    msg.addEventListener("mouseover",reveal);
+    msg.addEventListener("mouseout",disappear);
+    function reveal(){
+    heading.style.visibility="visible";
+    }
+    function disappear(){
+    heading.style.visibility="hidden";
+    }
+
+</script>
+</body>
+</html>

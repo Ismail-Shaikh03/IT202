@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p><b>Please enter the name of the dog breed you want to look up</b></p>
+<p>
+    <form action="DogBreeds.php">
+        <label for="user_input">Dog Breed's Name:</label>
+        <input type="text" id="user_input" name="user_input" onkeyup="searchResults(this.value)"><br>
+    </form>
+    <label for="search_results">FOUND:</label>
+    <div id="search_results"></div>
+</p>
+<script>
+function searchResults(userInput){
+    let user_input=document.getElementById("user_input");
+    let search_results=document.getElementById("search_results");
+    if(userInput==0){
+        search_results.innerHTML="";
+        return;
+    }
+    let xhr= new XMLHttpRequest();
+    xhr.onreadystatechange=function(){
+        if(this.readyState==4 && this.status==200){
+            search_results.innerHTML=this.responseText;
+        }
+    };
+    xhr.open("GET","DogBreeds.php?q="+userInput,true)
+    xhr.send();
+}
+
+</script>
+</body>
+</html>
